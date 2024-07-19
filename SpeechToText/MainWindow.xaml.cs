@@ -32,5 +32,23 @@ namespace SpeechToText
         {
 
         }
+
+        /*
+         class Program
+{
+    static void Main()
+    {
+        // Move the mouse by 100 pixels to the right and 100 pixels down
+        MouseController.Move(100, 100);
+
+        // Perform a left click
+        MouseController.LeftClick();
+
+        // Simulate pressing the 'A' key
+        KeyboardController.KeyDown(0x41); // 0x41 is the virtual key code for 'A'
+        KeyboardController.KeyUp(0x41);
+    }
+}
+         */
     }
 }
