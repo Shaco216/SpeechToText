@@ -8,7 +8,6 @@ public class SpeachRecognizer
     private readonly SpeechRecognitionEngine _recognizer;
     public SpeachRecognizer()
     {
-
         // Create a new SpeechRecognitionEngine instance
         _recognizer = new SpeechRecognitionEngine();
         // Configure the input to the default audio device
@@ -30,13 +29,13 @@ public class SpeachRecognizer
 
     }
 
-
-
     static void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
     {
         // Output the recognized text
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
+        
+
     }
 }
 
