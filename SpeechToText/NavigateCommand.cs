@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SpeechToText
+﻿namespace SpeechToText
 {
-    public enum NavigateCommand
+
+    public static class NavigateCommand
     {
-        Manual,
-        System
+        public static Dictionary<string, WhereNextCommandLocation> NavigateCommandDict = new Dictionary<string, WhereNextCommandLocation>()
+        {
+            {"Manual", WhereNextCommandLocation.NextStage},
+            {"System", WhereNextCommandLocation.NextStage}
+        };
     }
 }

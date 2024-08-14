@@ -35,7 +35,6 @@ public class SpeachRecognizer
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
         
-
     }
 }
 

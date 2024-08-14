@@ -1,9 +1,12 @@
 ﻿namespace SpeechToText
 {
-    public enum ToplevelCommand
+    public static class TopLevelCommand
     {
-        Navigate,
-        Write,
-        Code
+        public static Dictionary<string, WhereNextCommandLocation> TopLevelDict = new Dictionary<string, WhereNextCommandLocation>()
+        {
+            {"Navigate", WhereNextCommandLocation.NextStage},
+            {"Write", WhereNextCommandLocation.NextStage},
+            {"Code", WhereNextCommandLocation.NextStage}
+        };
     }
 }

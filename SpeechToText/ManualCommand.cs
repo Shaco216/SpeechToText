@@ -1,7 +1,11 @@
 ﻿namespace SpeechToText;
 
-public enum ManualCommand
+public static class ManualCommand
 {
-    x,
-    y
+    public static Dictionary<string, WhereNextCommandLocation> ManualCommandDict = new Dictionary<string, WhereNextCommandLocation>()
+    {
+        {"x", WhereNextCommandLocation.SameStage },
+        {"y", WhereNextCommandLocation.SameStage }
+
+    };
 }
