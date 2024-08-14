@@ -2,11 +2,11 @@
 {
     public static class TopLevelCommand
     {
-        public static Dictionary<string, WhereNextCommandLocation> TopLevelDict = new Dictionary<string, WhereNextCommandLocation>()
+        public static Dictionary<string, (WhereNextCommandLocation,)> TopLevelDict = new Dictionary<string, (WhereNextCommandLocation,int)>()
         {
-            {"Navigate", WhereNextCommandLocation.NextStage},
-            {"Write", WhereNextCommandLocation.NextStage},
-            {"Code", WhereNextCommandLocation.NextStage}
+            {"navigate", WhereNextCommandLocation.NextStage},
+            {"write", WhereNextCommandLocation.NextStage},
+            {"code", WhereNextCommandLocation.NextStage}
         };
     }
 }

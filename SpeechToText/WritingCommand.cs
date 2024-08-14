@@ -4,15 +4,15 @@
     {
         public static Dictionary<string, WhereNextCommandLocation> WritingCommandDict = new()
         {
-            {"Line", WhereNextCommandLocation.SameStage },
-            {"Word", WhereNextCommandLocation.SameStage },
-            {"DeleteWord", WhereNextCommandLocation.SameStage },
-            {"DeleteLine", WhereNextCommandLocation.SameStage },
-            {"RephraseWord", WhereNextCommandLocation.SameStage },
-            {"MoveToLine", WhereNextCommandLocation.SameStage },
-            {"MoveToWord", WhereNextCommandLocation.SameStage },
-            {"MoveToLetter", WhereNextCommandLocation.SameStage },
-            {"Exit", WhereNextCommandLocation.FinalStage }
+            {"line", WhereNextCommandLocation.SameStage },
+            {"word", WhereNextCommandLocation.SameStage },
+            {"deleteword", WhereNextCommandLocation.SameStage },
+            {"deleteline", WhereNextCommandLocation.SameStage },
+            {"rephraseword", WhereNextCommandLocation.SameStage },
+            {"movetoline", WhereNextCommandLocation.SameStage },
+            {"movetoword", WhereNextCommandLocation.SameStage },
+            {"movetoletter", WhereNextCommandLocation.SameStage },
+            {"exit", WhereNextCommandLocation.FinalStage }
         };
     }
 }
