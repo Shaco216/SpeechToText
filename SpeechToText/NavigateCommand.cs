@@ -3,10 +3,10 @@
 
     public static class NavigateCommand
     {
-        public static Dictionary<string, WhereNextCommandLocation> NavigateCommandDict = new Dictionary<string, WhereNextCommandLocation>()
+        public static Dictionary<string, (WhereNextCommandLocation,string)> NavigateCommandDict = new()
         {
-            {"manual", WhereNextCommandLocation.NextStage},
-            {"system", WhereNextCommandLocation.NextStage}
+            {"manual", (WhereNextCommandLocation.NextStage, "0")},
+            {"system", (WhereNextCommandLocation.NextStage, "1")}
         };
     }
 }

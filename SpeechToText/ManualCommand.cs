@@ -2,9 +2,9 @@
 
 public static class ManualCommand
 {
-    public static Dictionary<string, WhereNextCommandLocation> ManualCommandDict = new Dictionary<string, WhereNextCommandLocation>()
+    public static Dictionary<string, (WhereNextCommandLocation, string)> ManualCommandDict = new()
     {
-        {"x", WhereNextCommandLocation.SameStage },
+        {"x", (WhereNextCommandLocation.SameStage },
         {"y", WhereNextCommandLocation.SameStage }
 
     };

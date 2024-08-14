@@ -2,17 +2,17 @@
 {
     public static class WritingCommand
     {
-        public static Dictionary<string, WhereNextCommandLocation> WritingCommandDict = new()
+        public static Dictionary<string, (WhereNextCommandLocation,string)> WritingCommandDict = new()
         {
-            {"line", WhereNextCommandLocation.SameStage },
-            {"word", WhereNextCommandLocation.SameStage },
-            {"deleteword", WhereNextCommandLocation.SameStage },
-            {"deleteline", WhereNextCommandLocation.SameStage },
-            {"rephraseword", WhereNextCommandLocation.SameStage },
-            {"movetoline", WhereNextCommandLocation.SameStage },
-            {"movetoword", WhereNextCommandLocation.SameStage },
-            {"movetoletter", WhereNextCommandLocation.SameStage },
-            {"exit", WhereNextCommandLocation.FinalStage }
+            {"line", (WhereNextCommandLocation.SameStage, "0000") },
+            {"word", (WhereNextCommandLocation.SameStage, "0001") },
+            {"deleteword", (WhereNextCommandLocation.SameStage, "0010") },
+            {"deleteline", (WhereNextCommandLocation.SameStage, "0011") },
+            {"rephraseword", (WhereNextCommandLocation.SameStage, "0100") },
+            {"movetoline", (WhereNextCommandLocation.SameStage, "0101") },
+            {"movetoword", (WhereNextCommandLocation.SameStage, "0110") },
+            {"movetoletter", (WhereNextCommandLocation.SameStage, "0111") },
+            {"exit", (WhereNextCommandLocation.FinalStage, "1000") }
         };
     }
 }
