@@ -2,8 +2,10 @@
 {
     public class CommandInterpreter
     {
-        List<KeyValuePair<string,WhereNextCommandLocation>>AllCommands = new List<KeyValuePair<string, WhereNextCommandLocation>>();
-        bool endOfCommand;
+        List<KeyValuePair<string, (WhereNextCommandLocation, string)>>AllCommands = new List<KeyValuePair<string, (WhereNextCommandLocation,string)>>();
+        bool _endOfCommand;
+
+        public static string Trennzeichen { get { return "T"; } }
         public CommandInterpreter()
         {
             foreach (var tld in TopLevelCommand.TopLevelDict)
@@ -24,19 +26,26 @@
             }
         }
 
-        public void Interpret(string spoken)
+        public string Interpret(string spoken)
         {
-            endOfCommand = false;
+            _endOfCommand = false;
+            string byteCombination = string.Empty;
             foreach (var word in spoken.Split(' '))
             {
-                var foundWord = 
-                    AllCommands.FirstOrDefault(x => x.Key.Contains(word,StringComparison.OrdinalIgnoreCase))
-                if (foundWord.Key == null)
+                var foundWord =
+                    AllCommands.FirstOrDefault(x => x.Key.Contains(word, StringComparison.OrdinalIgnoreCase));
+                if (foundWord.Key == null || foundWord.Value.Item2 == null || foundWord.Value.Item2 == string.Empty)
                 {
-                    return;
+                    return string.Empty;
                 }
-                
+                (WhereNextCommandLocation w, string binaryData) = foundWord.Value;
+                byteCombination += binaryData;
+                //wurde bereits addiert
+                byteCombination += Trennzeichen;
+
             }
+            _endOfCommand = true;
+            return byteCombination;
         }
     }
 }
