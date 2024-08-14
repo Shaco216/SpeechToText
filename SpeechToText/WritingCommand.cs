@@ -4,6 +4,7 @@
     {
         public static Dictionary<string, (WhereNextCommandLocation,string)> WritingCommandDict = new()
         {
+            //TODO: deutsch übersetzen
             {"line", (WhereNextCommandLocation.SameStage, "0000") },
             {"word", (WhereNextCommandLocation.SameStage, "0001") },
             {"deleteword", (WhereNextCommandLocation.SameStage, "0010") },
