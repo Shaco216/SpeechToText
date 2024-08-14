@@ -18,7 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
-        <Button Content="Start" Click="start_click" Margin="20,50,20,50"/>
+            <Button Content="Start" x:Name ="Start_Button" Click="start_click" Margin="20,50,20,50"/>
             <Button Content="Stop" Click="stop_click" Margin="20,50,20,50"/>
         </StackPanel>
     </Grid>

@@ -26,11 +26,13 @@ namespace SpeechToText
         private void start_click(object sender, RoutedEventArgs e)
         {
             _speachRecognizer.StartRecording();
+            Start_Button.IsEnabled = false;
         }
 
         private void stop_click(object sender, RoutedEventArgs e)
         {
-
+            _speachRecognizer.StopRecording();
+            Start_Button.IsEnabled=true;
         }
 
         /*

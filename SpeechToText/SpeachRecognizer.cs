@@ -23,6 +23,7 @@ public class SpeachRecognizer
         // Start asynchronous recognition
         _recognizer.RecognizeAsync(RecognizeMode.Multiple);
 
+
         // Keep the console window open
         //Console.WriteLine("Speak into your microphone.");
         //Console.ReadLine();
@@ -35,6 +36,11 @@ public class SpeachRecognizer
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
         
+    }
+
+    public void StopRecording()
+    {
+        _recognizer.RecognizeAsyncStop();
     }
 }
 
