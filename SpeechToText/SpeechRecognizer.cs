@@ -27,6 +27,10 @@ public class SpeechRecognizer
         // Start asynchronous recognition
         _recognizer.RecognizeAsync(RecognizeMode.Multiple);
 
+        //CultureInfo ist tatsächlich abhängig von SystemSprache
+        var t = _recognizer.RecognizerInfo.Culture;
+        
+        
         // Keep the console window open
         //Console.WriteLine("Speak into your microphone.");
         //Console.ReadLine();
