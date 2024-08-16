@@ -1,4 +1,6 @@
-﻿namespace SpeechToText
+﻿using SpeechToText.Commands;
+
+namespace SpeechToText
 {
     public class CommandInterpreter
     {

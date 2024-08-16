@@ -1,4 +1,4 @@
-﻿namespace SpeechToText;
+﻿namespace SpeechToText.Commands;
 
 public enum WhereNextCommandLocation
 {

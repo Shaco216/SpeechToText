@@ -1,8 +1,8 @@
-﻿namespace SpeechToText
+﻿namespace SpeechToText.Commands
 {
     public static class WritingCommand
     {
-        public static Dictionary<string, (WhereNextCommandLocation,string)> WritingCommandDict = new()
+        public static Dictionary<string, (WhereNextCommandLocation, string)> WritingCommandDict = new()
         {
             //TODO: deutsch übersetzen
             {"line", (WhereNextCommandLocation.SameStage, "0000") },
