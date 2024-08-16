@@ -23,7 +23,7 @@ public class SpeachRecognizer
         // Start asynchronous recognition
         _recognizer.RecognizeAsync(RecognizeMode.Multiple);
 
-
+        //blubb
         // Keep the console window open
         //Console.WriteLine("Speak into your microphone.");
         //Console.ReadLine();
