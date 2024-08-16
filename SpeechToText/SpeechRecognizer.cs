@@ -6,6 +6,8 @@ namespace SpeechToText;
 public class SpeechRecognizer
 {
     private readonly SpeechRecognitionEngine _recognizer;
+    private readonly CommandInterpreter _interpreter;
+    private readonly CommandController _commandController;
     public SpeechRecognizer()
     {
         // Create a new SpeechRecognitionEngine instance
@@ -16,6 +18,8 @@ public class SpeechRecognizer
         _recognizer.LoadGrammar(new DictationGrammar());
         // Attach event handlers
         _recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Recognizer_SpeechRecognized);
+        _interpreter = new CommandInterpreter();
+        _commandController = new CommandController();
     }
 
     public void StartRecording()
@@ -28,11 +32,12 @@ public class SpeechRecognizer
         //Console.ReadLine();
     }
 
-    static void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+    void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
     {
         // Output the recognized text
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
+        string binaryString = _interpreter.Interpret(e.Result.Text);
 
     }
 
