@@ -1,56 +1,48 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
-namespace SpeechToText
+namespace SpeechToText;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    SpeechRecognizer _speachRecognizer;
+    public MainWindow()
     {
-        SpeechRecognizer _speachRecognizer;
-        public MainWindow()
-        {
-            InitializeComponent();
-            _speachRecognizer = new SpeechRecognizer();
-        }
-
-        private void start_click(object sender, RoutedEventArgs e)
-        {
-            _speachRecognizer.StartRecording();
-            Start_Button.IsEnabled = false;
-        }
-
-        private void stop_click(object sender, RoutedEventArgs e)
-        {
-            _speachRecognizer.StopRecording();
-            Start_Button.IsEnabled=true;
-        }
-
-        /*
-         class Program
-{
-    static void Main()
-    {
-        // Move the mouse by 100 pixels to the right and 100 pixels down
-        MouseController.Move(100, 100);
-
-        // Perform a left click
-        MouseController.LeftClick();
-
-        // Simulate pressing the 'A' key
-        KeyboardController.KeyDown(0x41); // 0x41 is the virtual key code for 'A'
-        KeyboardController.KeyUp(0x41);
+        InitializeComponent();
+        _speachRecognizer = new SpeechRecognizer();
     }
+
+    private void Start_click(object sender, RoutedEventArgs e)
+    {
+        _speachRecognizer.StartRecording();
+        Start_Button.IsEnabled = false;
+        Aufnahme_Status.Text = "Aufnahme läuft...";
+    }
+
+    private void Stop_click(object sender, RoutedEventArgs e)
+    {
+        _speachRecognizer.StopRecording();
+        Start_Button.IsEnabled=true;
+        Aufnahme_Status.Text = "Aufnahme gestoppt.";
+    }
+
+    /*
+     class Program
+{
+static void Main()
+{
+    // Move the mouse by 100 pixels to the right and 100 pixels down
+    MouseController.Move(100, 100);
+
+    // Perform a left click
+    MouseController.LeftClick();
+
+    // Simulate pressing the 'A' key
+    KeyboardController.KeyDown(0x41); // 0x41 is the virtual key code for 'A'
+    KeyboardController.KeyUp(0x41);
 }
-         */
-    }
+}
+     */
 }
