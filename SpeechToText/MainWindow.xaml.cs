@@ -16,11 +16,11 @@ namespace SpeechToText
     /// </summary>
     public partial class MainWindow : Window
     {
-        SpeachRecognizer _speachRecognizer;
+        SpeechRecognizer _speachRecognizer;
         public MainWindow()
         {
             InitializeComponent();
-            _speachRecognizer = new SpeachRecognizer();
+            _speachRecognizer = new SpeechRecognizer();
         }
 
         private void start_click(object sender, RoutedEventArgs e)

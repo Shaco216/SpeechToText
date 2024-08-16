@@ -3,10 +3,10 @@ using System.Windows;
 
 namespace SpeechToText;
 
-public class SpeachRecognizer
+public class SpeechRecognizer
 {
     private readonly SpeechRecognitionEngine _recognizer;
-    public SpeachRecognizer()
+    public SpeechRecognizer()
     {
         // Create a new SpeechRecognitionEngine instance
         _recognizer = new SpeechRecognitionEngine();
@@ -23,11 +23,9 @@ public class SpeachRecognizer
         // Start asynchronous recognition
         _recognizer.RecognizeAsync(RecognizeMode.Multiple);
 
-        //blubb
         // Keep the console window open
         //Console.WriteLine("Speak into your microphone.");
         //Console.ReadLine();
-
     }
 
     static void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -35,7 +33,7 @@ public class SpeachRecognizer
         // Output the recognized text
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
-        
+
     }
 
     public void StopRecording()
