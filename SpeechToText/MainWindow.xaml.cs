@@ -26,6 +26,7 @@ public partial class MainWindow : Window
         _speachRecognizer.StopRecording();
         Start_Button.IsEnabled=true;
         Aufnahme_Status.Text = "Aufnahme gestoppt.";
+        // find this and delete
     }
 
     /*
