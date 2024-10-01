@@ -34,6 +34,7 @@ public class CommandInterpreter
         string byteCombination = string.Empty;
         foreach (var word in spoken.Split(' '))
         {
+            //levenstein?
             var foundWord =
                 AllCommands.FirstOrDefault(x => x.Key.Contains(word, StringComparison.OrdinalIgnoreCase));
             if (foundWord.Key == null || foundWord.Value.Item2 == null || foundWord.Value.Item2 == string.Empty)
@@ -44,7 +45,7 @@ public class CommandInterpreter
             byteCombination += binaryData;
             //wurde bereits addiert
             byteCombination += Trennzeichen;
-
+            
         }
         _endOfCommand = true;
         return byteCombination;

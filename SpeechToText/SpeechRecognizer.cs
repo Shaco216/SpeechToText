@@ -42,7 +42,8 @@ public class SpeechRecognizer
         MessageBox.Show("Recognized text: " + e.Result.Text);
         //Console.WriteLine("Recognized text: " + e.Result.Text);
         string binaryString = _interpreter.Interpret(e.Result.Text);
-
+        //testvalue 00T1T
+        // 00 = Toplevel 1 = erste sublevel -->
     }
 
     public void StopRecording()
