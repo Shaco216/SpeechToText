@@ -11,6 +11,7 @@ public static class MouseController
     private const int MOUSEEVENTF_LEFTUP = 0x0004;
     private const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
     private const int MOUSEEVENTF_RIGHTUP = 0x0010;
+    //test3
 
     public static void Move(int xDelta, int yDelta)
     {
